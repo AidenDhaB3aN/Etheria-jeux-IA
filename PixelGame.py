@@ -6,7 +6,7 @@ screen_width, screen_height = 800, 600
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 background_image = pygame.image.load('Image/background nuage2.png').convert()
-ground_image = pygame.image.load('Image/ground2.png').convert_alpha()
+ground_image = pygame.image.load('Image/sol test.png').convert()
 
 player_image = pygame.image.load('Image/Player idle.png').convert_alpha()
 
@@ -21,17 +21,20 @@ player_jump_image = pygame.image.load('Image/Player Jump.png').convert_alpha()
 player_mask = pygame.mask.from_surface(player_image)
 ground_mask = pygame.mask.from_surface(ground_image)
 
+
 # Obtenez le rectangle de collision pour le sol
 ground_rect = ground_image.get_rect()
 # Abaissez le rectangle de collision du sol
-ground_rect.y = screen_height - ground_image.get_height() # Augmentez la valeur pour abaisser la collision
+ground_rect.y = screen_height + ground_image.get_height()  # Augmentez la valeur pour abaisser la collision
 
 # Gravité
 gravity = 0.5
 # Vitesse verticale initiale du personnage
 player_y_velocity = 0
 
+
 clock = pygame.time.Clock()
+
 
 running = True
 while running:
@@ -90,3 +93,7 @@ while running:
     
     # Met à jour l'affichage
     clock.tick(60)
+
+
+
+
