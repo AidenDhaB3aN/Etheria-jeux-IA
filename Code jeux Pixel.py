@@ -19,6 +19,7 @@ black = (0, 0, 0)
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Mario Bros Platformer")
 
+
 # Position initiale du joueur
 player_x = width // 2
 player_y = height - ground_height - player_size
